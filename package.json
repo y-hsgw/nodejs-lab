@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
   "description": "",
   "devDependencies": {
     "@types/node": "^22.7.4",
