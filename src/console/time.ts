@@ -1,0 +1,7 @@
+const hoge = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+};
+
+console.time('bunch-of-stuff');
+await hoge();
+console.timeEnd('bunch-of-stuff');
