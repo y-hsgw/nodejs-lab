@@ -4,4 +4,6 @@ const hoge = async () => {
 
 console.time('bunch-of-stuff');
 await hoge();
+console.timeLog('bunch-of-stuff', '経過');
+await hoge();
 console.timeEnd('bunch-of-stuff');
