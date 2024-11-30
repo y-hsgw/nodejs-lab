@@ -4,4 +4,5 @@ console.log(myURL.href);
 
 myURL.href = 'https://example.com/bar';
 console.log(myURL.href);
+console.log(myURL.toString());
 // Prints https://example.com/bar
