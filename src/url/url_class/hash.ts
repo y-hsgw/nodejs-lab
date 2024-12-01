@@ -1,3 +1,5 @@
+import { URL } from 'node:url';
+
 const myURL = new URL('https://example.org/foo#bar');
 console.log(myURL.hash);
 // Prints #bar

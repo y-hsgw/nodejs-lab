@@ -1,3 +1,5 @@
+import { URL } from 'node:url';
+
 const myURL = new URL('https://example.org/foo');
 console.log(myURL.href);
 // Prints https://example.org/foo
