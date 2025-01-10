@@ -3,10 +3,9 @@ import path from 'node:path';
 
 const fileName = 'thefile.txt';
 const filePath = path.join(import.meta.dirname, fileName);
-await fs.writeFile(filePath, 'hoge');
-
 let fileHandle;
 try {
+  await fs.writeFile(filePath, 'hoge');
   fileHandle = await fs.open(filePath, 'r');
   let stats = await fs.stat(filePath);
   console.log(stats);
@@ -15,5 +14,6 @@ try {
   stats = await fs.stat(filePath);
   console.log(stats);
 } finally {
+  await fs.unlink(filePath);
   fileHandle?.close();
 }
