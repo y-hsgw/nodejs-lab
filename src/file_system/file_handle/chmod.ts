@@ -1,9 +1,10 @@
-import fs from 'node:fs/promises';
+import fs, { type FileHandle } from 'node:fs/promises';
 import path from 'node:path';
 
 const fileName = 'thefile.txt';
 const filePath = path.join(import.meta.dirname, fileName);
-let fileHandle;
+let fileHandle: FileHandle | undefined;
+
 try {
   await fs.writeFile(filePath, 'hoge');
   fileHandle = await fs.open(filePath, 'r');
@@ -15,5 +16,5 @@ try {
   console.log(stats);
 } finally {
   await fs.unlink(filePath);
-  fileHandle?.close();
+  await fileHandle?.close();
 }
