@@ -1,4 +1,4 @@
-import { open, readFile, unlink, writeFile } from 'node:fs/promises';
+import { open, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const fileName = 'thefile.txt';
