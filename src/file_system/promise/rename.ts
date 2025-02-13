@@ -1,13 +1,4 @@
-import {
-  writeFile,
-  lstat,
-  rename,
-  readFile,
-  access,
-  mkdir,
-  readdir,
-  unlink,
-} from 'node:fs/promises';
+import { writeFile, rename, access, unlink } from 'node:fs/promises';
 import path from 'node:path';
 
 const targetFile = path.join(import.meta.dirname, 'hoge.txt');

@@ -10,7 +10,7 @@ asyncLocalStorage.run(123, () => {
       console.log('2', asyncLocalStorage.getStore()); // Returns undefined
       throw new Error();
     });
-  } catch (e) {
+  } catch {
     console.log('3', asyncLocalStorage.getStore()); // Returns 123
   }
 });

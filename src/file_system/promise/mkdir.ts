@@ -1,4 +1,4 @@
-import { mkdir, rmdir } from 'node:fs/promises';
+import { mkdir } from 'node:fs/promises';
 import { URL } from 'node:url';
 
 const projectFolder = new URL('./test/project', import.meta.url);

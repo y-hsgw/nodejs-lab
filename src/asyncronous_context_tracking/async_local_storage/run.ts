@@ -14,6 +14,6 @@ try {
     // エラースローした場合は、runメソッドも同じエラーをスローするようになっている
     throw new Error();
   });
-} catch (e) {
+} catch {
   console.log('3', asyncLocalStorage.getStore()); // Returns undefined
 }
