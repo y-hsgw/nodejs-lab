@@ -29,3 +29,15 @@ import path from 'node:path';
     });
   });
 }
+
+{
+  const maybeFile = path.join(import.meta.dirname, 'optional-file.txt');
+
+  rm(maybeFile, { force: true }, (err) => {
+    if (err) throw err;
+
+    console.log(
+      '存在していないファイルだが、forceオプションでエラーにならない',
+    );
+  });
+}
