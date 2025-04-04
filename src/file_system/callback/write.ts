@@ -11,8 +11,11 @@ import path from 'node:path';
     open(filePath, 'a', (err, fd) => {
       if (err) throw err;
 
-      write(fd, 'Good ', 0, 'ascii', (err) => {
+      write(fd, 'Good ', 0, 'ascii', (err, written, str) => {
         if (err) throw err;
+
+        console.log('written', written);
+        console.log('str', str);
 
         readFile(filePath, { encoding: 'utf8' }, (err, data) => {
           if (err) throw err;
@@ -38,8 +41,11 @@ import path from 'node:path';
     open(filePath, 'a', (err, fd) => {
       if (err) throw err;
 
-      write(fd, Buffer.alloc(10, 'a'), (err) => {
+      write(fd, Buffer.alloc(10, 'a'), (err, written, buffer) => {
         if (err) throw err;
+
+        console.log('written', written);
+        console.log('buffer', buffer);
 
         readFile(filePath, { encoding: 'utf8' }, (err, data) => {
           if (err) throw err;
