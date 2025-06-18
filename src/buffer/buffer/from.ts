@@ -37,3 +37,33 @@ console.log('-----buffer-----');
   console.log(buf1.toString());
   console.log(buf2.toString());
 }
+
+console.log('-----object-----');
+{
+  const buffer1 = Buffer.from(new String('1234'));
+  console.log(buffer1);
+
+  class Foo {
+    [Symbol.toPrimitive]() {
+      return 'this is a test';
+    }
+  }
+
+  const buffer2 = Buffer.from(new Foo(), 'utf8');
+  console.log(buffer2);
+
+  const arr = new Uint16Array(2);
+
+  arr[0] = 5000;
+  arr[1] = 4000;
+
+  const obj = {
+    valueOf() {
+      return arr.buffer;
+    },
+  };
+
+  const buffer3 = Buffer.from(obj, 1, 2);
+
+  console.log(buffer3);
+}
