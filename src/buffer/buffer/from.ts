@@ -67,3 +67,13 @@ console.log('-----object-----');
 
   console.log(buffer3);
 }
+
+console.log('-----string-----');
+{
+  const buf1 = Buffer.from('this is a tést');
+  const buf2 = Buffer.from('7468697320697320612074c3a97374', 'hex');
+
+  console.log(buf1.toString());
+  console.log(buf2.toString());
+  console.log(buf1.toString('latin1'));
+}
