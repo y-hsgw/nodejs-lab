@@ -1,0 +1,4 @@
+import { Buffer } from 'node:buffer';
+
+const buf = Buffer.from([0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]);
+console.log(buf.readBigInt64LE()); // 256n
