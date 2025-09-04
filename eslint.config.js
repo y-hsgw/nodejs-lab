@@ -1,9 +1,10 @@
 import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+export default defineConfig(
+  tseslint.configs.base,
   {
     files: ['**/*.ts'],
-    extends: [tseslint.configs.base],
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',
     },
