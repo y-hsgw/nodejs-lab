@@ -12,14 +12,13 @@ messageChannel1.port1.onmessage = ({ data }) => {
 try {
   messageChannel1.port2.postMessage(unclonedObject);
 } catch (error) {
-  console.warn(error)
+  console.warn(error);
 }
 
-
-const clonedObject = { foo: "bar" }
+const clonedObject = { foo: 'bar' };
 
 try {
   messageChannel1.port2.postMessage(clonedObject);
 } catch (error) {
-  console.warn(error)
+  console.warn(error);
 }

@@ -8,7 +8,8 @@
     "build": "tsc -p ./tsconfig.json",
     "build:watch": "npm run build -- -w",
     "type:check": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier . --ignore-unknown --write"
   },
   "keywords": [],
   "author": "",

@@ -10,7 +10,7 @@ const { port1 } = new MessageChannel();
 try {
   port1.postMessage(typedArray1, [typedArray1.buffer]);
 } catch (error) {
-  console.warn(error)
+  console.warn(error);
   // error.name === 'DataCloneError'
 }
 
