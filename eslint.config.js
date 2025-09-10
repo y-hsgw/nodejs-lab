@@ -10,6 +10,11 @@ export default defineConfig(
     },
   },
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    },
+  },
+  {
     ignores: ['dist/'],
   },
 );
