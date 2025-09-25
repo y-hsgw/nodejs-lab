@@ -8,7 +8,6 @@ if (isMainThread) {
   let c = 0;
   bc.onmessage = (event) => {
     console.log(c);
-    // @ts-expect-error
     console.log(event.data);
     if (++c === 10) bc.close();
   };

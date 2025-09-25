@@ -1,6 +1,5 @@
 import process from 'node:process';
 import {
-  // @ts-expect-error
   postMessageToThread,
   threadId,
   workerData,
