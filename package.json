@@ -15,7 +15,7 @@
   "author": "",
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "description": "",
   "devDependencies": {
