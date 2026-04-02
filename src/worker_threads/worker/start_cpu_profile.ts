@@ -9,7 +9,6 @@ const worker = new Worker(
 );
 
 worker.on('online', async () => {
-  // @ts-expect-error
   const handle = await worker.startCpuProfile();
   console.log('handle', handle);
   const profile = await handle.stop();
